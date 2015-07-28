@@ -1,0 +1,24 @@
+Sheehan Toufiq
+Programming Assignment #2
+
+
+Exercise #1:
+
+
+Question #1:
+
+The ps command shows what processes that are currently running on the terminal (TTY). With no options the ps command shows each process's PID, process ID, TTY, TIME, and CMD the command running. 
+
+When using the ps -l command, it will show all the processes that are currently running on the terminal (TTY) and information on each process associated with the keywords uid, pid, ppid, flags, cpu, pri, nice, vsz=SZ, rss, wchan, state=S, paddr=ADDR, tty, time, and comman=CMD.
+
+When using the ps -e command, it shows all processes running on the machine from all users. It shows the PID, TIME, and command=CMD.
+
+When using the ps -u command, it shows all processes running from a specified user, but first it says that you must specify a user as an argument, and shows the user's process's once the command is run with an argument.
+
+
+Question #2:
+
+When using the ps -el command, it shows all the processes running on the machine from all users and information on each process associated with the keywords uid, pid, ppid, flags, cpu, pri, nice, vsz=SZ, rss, wchan, state=S, paddr=ADDR, tty, time, and comman=CMD.
+
+
+

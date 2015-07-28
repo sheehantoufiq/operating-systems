@@ -1,0 +1,54 @@
+Exercise #1: 
+The first issue is that the variable pid needs to declared as an int, or else the program will not compile. The second issue is that there would be an infinite loop would keep creating child processes. It will only exit when pid == 0, which would be never. Therefore the initial PID will keep creating child processes using the fork() command, then putting them to sleep. There also would be no wait() command on child processes creating zombie processes until there are no more PIDs left.
+
+
+Exercise #2:
+For this program, there is a recursive while statement that forks the intial PID and subtracts 1 from i = 10. The else statement in the if/else conditional would never run because the PID will never go to 0 since it keeps of using the fork() command until i = 10. We can solve how many PIDs are created by using induction and recursively define T(n) until n goes to 10.
+
+T(1):  | 1 process (not including initial process)
+       |   i = 9 
+T(2):  | 2 processes
+       |   i = 8
+T(3):  | 3 processes
+       |   i = 7
+T(4):  | 5 processes
+       |   i = 6
+T(5):  | 8 processes
+       |   i = 5
+T(6):  | 13 processes
+       |   i = 4
+T(7):  | 21 processes
+       |   i = 3
+T(8):  | 34 processes
+       |   i = 2
+T(9):  | 55 processes
+       |   i = 1
+T(10): | 89 processes
+       |   i = 0
+
+There would be 89 processes (not including the intial process) by the time i reaches 0. We can also see that each loop will create an extra fork for each of the processes. This would result in a fibonacci sequence.
+
+
+Exercise #3:
+
+Visual Table of running processes:
+
+|          | PID 42            | PID 11          | PID 25           | PID 89           | PID 123
+|          |                   |                 |                  |                  |
+| count 0  | fork() -> PID 11  | PID 11 created  |                  |                  |
+|          | fork() -> PID 25  | wait for PID 25 | PID 25 created   |                  |
+|          | fork() -> PID 89  |                 | PID 25 sleep(20) | PID 89 created   |
+|          | fork() -> PID 123 |                 |                  | PID 89 sleep(10) | PID 123 created
+|          | sleep(20)         |                 |                  |                  | PID 123 sleep(30)
+|          |                   |                 |                  | ** ONE **        |
+| count 10 |                   |                 |                  | PID 89 killed    |
+| count 20 | PID 42 killed     | PID 11 killed   | PID 25 killed    |                  |
+| count 25 |                   |                 |                  |                  |
+|          |                   |                 |                  |                  | ** TWO **
+| count 30 |                   |                 |                  |                  | PID 123 killed
+
+
+a) In the representation above we can visualize the processes as they are running concurrently. By the time "** ONE **" is printed out all PIDs are running, PPID 42, along with it's child processes PID 11, PID 25, PID 89, and PID 123
+
+b) By the time ** TWO ** is printed out, the only process running is PID 11. It has no parent or children therefore it is an orphan process.
+

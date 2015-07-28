@@ -1,0 +1,26 @@
+Sheehan Toufiq
+Homework Assignment #1
+
+
+Question #1: Textbook 1.10:
+
+Give two reasons why caches are useful. What problems do they solve? What problems do they cause? If a cache can be made as large as the device for which it is caching (for instance, a cache as large as a disk), why not make it that large and eliminate the device?
+
+Give two reasons why caches are useful:
+Two reasons caches are useful include faster components, like registers, do not have to reload data from a slower component, for example main memory or a disk drive, every time is data exchanged. Instead data is stored in the cache where it can be available to a faster component at faster speeds
+Also more than two components can exchange data and perform transfers when the components are performing at different speeds.
+
+What problems do they solve?
+Caches solve the problem of components performing transfers at different speeds by providing a buffer of intermediate speed between the components. If the faster component finds the data it needs in the cache, it does not need to wait for searching within the slower component. Without caches, there would constantly be wasted cycles while instructions are fetched from the main memory
+
+What problems do they cause?
+However, caches are limited in size. This makes cache management very important and if not done correctly the cache will have greatly decreased performance. Also the data in the cache must be kept consistent with the data in the components. If a component changes data, and the data is also in the cache, the cache must also be updated. This is fine in computing environments that performs one process at a time, however with multiprocessor systems where each processor has internal registers and a local cache, the data exists simultaneously in all caches and all must be updated. It gets even more complex in a distributed environment.
+
+If a cache can be made as large as the device for which it is caching (for instance, a cache as large as a disk), why not make it that large and eliminate the device?
+Caches cannot retain data without electricity. Therefore there will be data loss whenever a computer is turned off. Also a cache the size of a component as large as a disk would be very costly and impractical.
+
+
+Question #2: Textbook 2.20:
+It is sometimes difficult to achieve a layered approach if two components of the operating system are dependent on each other. Identify a scenario in which it is unclear how to layer two system components that require tight coupling of their functionalities.
+
+The device drivers for the backing store should normally be at a layer above the CPU because they need to wait for I/O operations to be completed and the CPU can be rescheduled for a later time. However if the CPU scheduler needs to use virtual memory disk space, then the backing store would need to be under the CPU.

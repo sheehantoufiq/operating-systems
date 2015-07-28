@@ -1,0 +1,42 @@
+32096 execve("./HelloWorld", ["./HelloWorld"], [/* 24 vars */]) = 0
+32096 brk(0)                            = 0x1146000
+32096 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+32096 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6627588000
+32096 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+32096 open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+32096 fstat(3, {st_mode=S_IFREG|0644, st_size=23697, ...}) = 0
+32096 mmap(NULL, 23697, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f6627582000
+32096 close(3)                          = 0
+32096 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+32096 open("/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+32096 read(3, "\x7f\x45\x4c\x46\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x3e\x00\x01\x00\x00\x00\x80\x18\x02\x00\x00\x00\x00\x00"..., 832) = 832
+32096 fstat(3, {st_mode=S_IFREG|0755, st_size=1815224, ...}) = 0
+32096 mmap(NULL, 3929304, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f6626fa8000
+32096 mprotect(0x7f662715d000, 2097152, PROT_NONE) = 0
+32096 mmap(0x7f662735d000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b5000) = 0x7f662735d000
+32096 mmap(0x7f6627363000, 17624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f6627363000
+32096 close(3)                          = 0
+32096 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6627581000
+32096 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6627580000
+32096 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f662757f000
+32096 arch_prctl(ARCH_SET_FS, 0x7f6627580700) = 0
+32096 mprotect(0x7f662735d000, 16384, PROT_READ) = 0
+32096 mprotect(0x600000, 4096, PROT_READ) = 0
+32096 mprotect(0x7f662758a000, 4096, PROT_READ) = 0
+32096 munmap(0x7f6627582000, 23697)     = 0
+32096 brk(0)                            = 0x1146000
+32096 brk(0x1167000)                    = 0x1167000
+32096 open("/etc/localtime", O_RDONLY|O_CLOEXEC) = 3
+32096 fstat(3, {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+32096 fstat(3, {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+32096 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6627587000
+32096 read(3, "\x54\x5a\x69\x66\x32\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00"..., 4096) = 118
+32096 lseek(3, -62, SEEK_CUR)           = 56
+32096 read(3, "\x54\x5a\x69\x66\x32\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00"..., 4096) = 62
+32096 close(3)                          = 0
+32096 munmap(0x7f6627587000, 4096)      = 0
+32096 fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...}) = 0
+32096 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6627587000
+32096 write(1, "Hello World!\n", 13)    = 13
+32096 write(1, "Right now: Thu Jun 19 18:56:10 2"..., 36) = 36
+32096 exit_group(36)                    = ?

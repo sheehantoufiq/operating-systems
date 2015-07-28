@@ -1,0 +1,4 @@
+Exercise #2
+
+Question #2
+For moving the same file (7MB), there are 117 system calls. Much fewer than cp (552). The mv command does not write to a buffer when moving files, it uses mmap to create a new mapping in the virtual address space. The number of system calls used for mmap is not determined by the size of the file.

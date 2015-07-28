@@ -1,0 +1,12 @@
+Sheehan Toufiq
+Programming Assignment #1
+
+
+Exercise #1
+
+
+3. Based on your intuition, on reading man pages, and on the information in the trace files, pick three system calls placed by the Java HelloWorld program and say what you think they do.
+
+close: Closes a file descriptor so that it no longer refers to any file and may be reused
+brk: Changes data segment size. Changes the location of the program break, which defines the end of the process's data segment.
+execve: Executes the program pointed to by filename.

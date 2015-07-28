@@ -1,0 +1,23 @@
+Sheehan Toufiq
+Programming Assignment #2
+
+
+Exercise #3.1:
+
+
+Program #2:
+
+attached server1.c file
+
+
+Question #1:
+Now multiple connections are able to be handled by the server. They all have a PPID is the parent's process ID.
+
+
+Question #2:
+Zombies appear when a child process has completed execution. This happens because the loop in the server1.file forks the parent process then exits the child process after execution.
+
+
+Program #3
+
+attached server2.c file

@@ -1,0 +1,15 @@
+Welcome to the lab1: process management.
+
+You will find in this directory all the needed files
+and links for the lab. Your work consists of completing
+programs so that they work.
+
+simplefork.c : this is a basic fork program to get familiar
+ with, do not forget the wait, introduction assignment.
+
+server.c : this is the real assignment 1. You have to
+ modify this server so that it can accept several connections
+ at the same time. You will then discover that zombies are
+ generated, consuming resources, which will prevent connections
+ after a while. You will have then to solve this problem.
+

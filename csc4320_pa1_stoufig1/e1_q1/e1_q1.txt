@@ -1,0 +1,11 @@
+Sheehan Toufiq
+Programming Assignment #1
+
+
+Exercise #1
+
+
+1. How many system calls are placed in total by each HelloWorld program?
+
+HelloWorld C Program = 41 
+HelloWorld Java Program = 179

@@ -1,0 +1,27 @@
+Operating Systems PA3
+
+Sheehan Toufiq
+
+1.2:
+
+Q1. The "total" at the top is the number of disk blocks taken by the directory.
+
+Q2. The 2 show the number of hard links for the file. The reason there are 2 is that when unix creates a new folder, there are 2 links, '.' and '..'. The '.' link is the relative reference for the current directory, while the '..' link is the relative reference for the parent directory.
+
+Q3. The number now has changed to 3. This is because there is a new link inside the directory which is the new file.
+
+Q4. Now there are 5 links. This is because the new folder has 2 additional links '.' and '..'.
+
+Q5. The original file does not show any indication of having a link, however the symbolic links have arrows pointed to the original file it is linked to. Same with the the directory, only the link shows where it is pointed to. Making a link that doesn't exist is successful, however since there is no file the link doesn't work properly. Yet the link still shows that it is pointing to the nonexistent file. A file can be removed successfully, yet the link still shows that it is pointing to a nonexistent file.
+
+Q6. If file1 already exists it will not allow you to create a soft link to because the link is an existing file. However if you try this after removing file1 (I had a file1 before), It will create a soft link named file1 to file1. However if I try to "cat" or "touch" the file, it tells me there are "Too many levels of symbolic links".
+
+Q7. This time a hard link is created. However the link does not point to the file it is linked to.
+
+Q8. For hard links it allows me to run the chmod ad touch commands. However if I try to run either with file1 and the symbolic link file1, then it tells me there are too many levels of symbolic links.
+
+Q9. There is no real way to find which is a hard link. However you can run "ls -i" to see the inode number, then you can run "find <filesystemroot> -inum <inode>" to find all files with the given inode.
+
+Q10. When removing the file, the file is removed. However now the hard link will not work properly.
+
+Q11. When trying to make a hard link to a directory, it won't let you. The output says that it is a directory. When trying to make a hard link to a file that doesn't exist, it outputs that there is no such file or directory

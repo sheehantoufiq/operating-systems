@@ -1,0 +1,15 @@
+Sheehan Toufiq
+Programming Assignment #2
+
+
+Exercise #2
+
+
+Program #1
+
+attached simplefork.c file
+
+
+Question #1:
+
+PID stands for process ID, PPID stands from parent process ID, PGID stands for process group ID.
